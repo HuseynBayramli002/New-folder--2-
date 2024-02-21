@@ -24,7 +24,7 @@ const Desing = () => {
                 <p className="mt-[10px] mb-[30px] text-sm text-white">Suni intelekt sistemi</p>
                 <p className=" text-white w-60 text-sm ">Bu formu doldurduqdan sonra öz yaşıdlarınız arasında ən yaxşı hansı faizlikdə olduğunuzu müəyyən edə biləcəksiniz.</p>
             <div className=" absolute w-60 bottom-24 left-60">
-                <img src="/public/komp.svg" alt="" />
+                <img src="/komp.svg" alt="" />
             </div>
             </div>
         </div>
