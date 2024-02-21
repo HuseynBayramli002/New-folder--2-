@@ -6,7 +6,6 @@ body{
     background-image: url(/backgound-foto.png);
     background-repeat: no-repeat;
     background-color: #FBFBFB;
-    width: 100%;
 }
 
 input::-webkit-calendar-picker-indicator {
