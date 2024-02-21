@@ -40,7 +40,7 @@ const Sidebar = () => {
         {data?.map((item) => (
           <li
             key={item.id}
-            className={`pl-3 my-2  pr- rounded-l-xl  ${selectedItemId === item.id ? "bg-sky-800 w-[170px] h-[30px]" : "bg-gray-200 w-[136px]"}`}
+            className={`pl-3 my-2  pr- rounded-l-xl  ${selectedItemId === item.id ? "bg-sky-800 w-[170px] h-[30px] text-white flex items-center gap-2" : "bg-gray-200 w-[136px]"}`}
             onClick={() => handleItemClick(item.id)}
           >
             {selectedItemId === item.id && <span className="mr- ">{item.id}</span>} <a href="#">{item.title}</a>
