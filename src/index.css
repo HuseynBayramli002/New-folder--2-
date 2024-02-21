@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-image: url(/backgound-foto.png);
+    background-repeat: no-repeat;
+    background-color: #FBFBFB;
+}
+
+input::-webkit-calendar-picker-indicator {
+    background-image:url(/Date.svg);
+    width: 100px;
+}
