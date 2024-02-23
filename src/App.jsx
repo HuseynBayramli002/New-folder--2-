@@ -1,7 +1,6 @@
 import  Desing  from "./Component/Desing"
-import Footer from "./Component/Footer"
-import Form from "./Component/Form"
 import Sidebar from "./Component/Sidebar"
+import Content from "./Component/Content"
 
 const App = () => {
   return (
@@ -11,8 +10,7 @@ const App = () => {
       <div className="flex justify-end mr-[10%] mt-[7%]">
         <Sidebar />
         <div className="w-[575px] flex flex-col">
-          <Form />
-          <Footer />
+          <Content/>
         </div>
       </div>
     </div>
