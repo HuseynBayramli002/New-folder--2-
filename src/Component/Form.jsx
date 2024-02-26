@@ -84,7 +84,9 @@ const Form = () => {
       <h2 className="text-emerald-900 text-xl w-fit ml-2 mb-[18px]">İş təcrübəsi</h2>
       <LineProgresBar />
       <h3 className="w-fit ml-2"> İş təcrübəniz var? </h3>
+      <div className="mt-[26px]">
       <RadioButton confirmation='Bəli' denial='Xeyr'/>
+      </div>
       <div>
 
         <div className="mt-[25px]">
