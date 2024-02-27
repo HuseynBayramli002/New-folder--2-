@@ -4,6 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Form from "./Form";
 import FormData from "./FormData";
 import FormSpesialData from "./FormSpesialData";
+import FormSkill from "./FormSkill";
 
 const Content = () => {
   const [hovered, setHovered] = useState(false);
@@ -30,6 +31,7 @@ const Content = () => {
         {currentPage === 1 && <div><Form /></div>}
         {currentPage === 2 && <div><FormData /></div>}
         {currentPage === 3 && <div><FormSpesialData /></div>}
+        {currentPage === 4 && <div><FormSkill /></div>}
       </div>
 
       <div className="flex justify-between items-center">

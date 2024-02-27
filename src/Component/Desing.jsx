@@ -2,7 +2,7 @@ import Logo from "/Logo.svg"
 const Desing = () => {
     return (
         <div className="ml-10 flex gap-3 relative">
-            <div className="w-[4px] h-[314px] bg-white"></div>
+            <div className="w-[3px] h-[314px] bg-white"></div>
             <div className="w-[2px] h-[407px] bg-white "></div>
             <div className="mt-10 ml-5">
                 <div>

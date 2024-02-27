@@ -37,7 +37,7 @@ const FormSpesialData = () => {
                 <h2 className="text-emerald-900  text-xl w-fit ml-2 mb-[18px]">
                     Xüsusi bacarıqlar
                 </h2>
-                <LineProgresBar />
+                <LineProgresBar progressBar={60} />
                 <h3 className="w-fit ml-2">Xüsusi bacarığınız var?* </h3>
                 <div className="mt-[26px] ">
                     <RadioButton confirmation="Bəli" denial="Xeyr" handleVisibility={handleAbilityVisibility} />

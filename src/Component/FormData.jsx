@@ -8,7 +8,7 @@ const FormData = () => {
     return (
         <div className="bg-white p-10 pb-1 rounded-xl h-[616px] w-[575px]">
             <h2 className="text-emerald-900 text-xl w-fit ml-2 mb-[18px]">İş təcrübəsi</h2>
-            <LineProgresBar />
+            <LineProgresBar progressBar={60} />
             <div className="mt-5">
                 <div className=" w-[490px] h-[35px] flex justify-between items-center mt-[10px] border rounded-3xl px-2 relative">
                     <div className="flex justify-start items-center h-[35px]  border-gray-200 ">
