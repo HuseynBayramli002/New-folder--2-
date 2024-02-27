@@ -27,6 +27,14 @@ const Form = () => {
     setEnterpriseData(event.target.value);
   };
 
+  const handleCheckboxChange = (event) => {
+    if (event.target.checked) {
+      setEndDate(new Date().toISOString().split("T")[0]);
+    } else {
+      setEndDate("");
+    }
+  };
+
   const handleDutyChange = (event) => {
     setDutyData(event.target.value);
   };
@@ -151,7 +159,7 @@ const Form = () => {
         </div>
         <div className="flex justify-end items-center gap-2 my-4">
           <h2>Hal hazırda çalışıram</h2>
-          <input type="checkbox" className="h-5 w-5 rounded border border-gray-300 transition duration-200 ease-in-out" />
+          <input type="checkbox" onChange={handleCheckboxChange} className="h-5 w-5 rounded border border-gray-300 transition duration-200 ease-in-out" />
         </div>
       </div>
 

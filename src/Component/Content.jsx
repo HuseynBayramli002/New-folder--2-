@@ -22,6 +22,7 @@ const Content = () => {
       setCurrentPage(currentPage - 1);
     }
   };
+  console.log(currentPage)
   const handleMouseEnter = () => {
     setHovered(true);
   };
