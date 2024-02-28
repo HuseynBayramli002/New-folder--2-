@@ -2,10 +2,12 @@ import { useState } from "react";
 import LineProgresBar from "./LineProgresBar";
 import Calendar from "./Calendar";
 import RadioButton from './RadioButton';
+import { GoCheck } from "react-icons/go";
+
 
 const Form = () => {
   const [selectedLaborSkill, setSelectedLaborSkill] = useState("");
-  const [selectedProfessionalism, setSelectedProfessionalism] = useState("");
+  const [selectedProfessionalism, setSelectedProfessionalism] = useState("");  
   const [showLaborSkillList, setShowLaborSkillList] = useState(false);
   const [showProfessionalismList, setShowProfessionalismList] = useState(false);
   const [enterpriseData, setEnterpriseData] = useState('');
@@ -38,6 +40,12 @@ const Form = () => {
   const handleDutyChange = (event) => {
     setDutyData(event.target.value);
   };
+  
+  const handleSave = () => {
+    // Local storage'a gönderme işlemi
+    localStorage.setItem("formData", JSON.stringify({enterpriseData, dutyData, startDate, endDate}));
+  };
+
   const laborskilldataData = [
     {
       id: 1,
@@ -86,7 +94,6 @@ const Form = () => {
       skilldata: "C-level",
     },
   ];
-
 
   return (
     <div className="bg-white p-10 pb-1 rounded-xl w-[575px] h-[616px]">
@@ -164,11 +171,9 @@ const Form = () => {
       </div>
 
       <div className="flex justify-center pb-3">
-        <button className={`px-4 py-2 border border-gray-200 rounded-3xl w-[155px] flex items-center justify-center gap-2 text-base duration-300 ease-in-out hover:bg-slate-400`}>
+        <button onClick={handleSave} className={`px-4 py-2 border border-gray-200 rounded-3xl w-[155px] flex items-center justify-center gap-2 text-base duration-300 ease-in-out hover:bg-slate-400`}>
           Yadda saxla
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M7.50001 13.5L4.58334 10.5834C4.50707 10.5062 4.41624 10.4449 4.3161 10.4031C4.21597 10.3612 4.10853 10.3397 4.00001 10.3397C3.89149 10.3397 3.78404 10.3612 3.68391 10.4031C3.58378 10.4449 3.49294 10.5062 3.41667 10.5834C3.33947 10.6596 3.27818 10.7505 3.23635 10.8506C3.19451 10.9508 3.17297 11.0582 3.17297 11.1667C3.17297 11.2752 3.19451 11.3827 3.23635 11.4828C3.27818 11.5829 3.33947 11.6738 3.41667 11.75L6.90834 15.2417C7.23334 15.5667 7.75834 15.5667 8.08334 15.2417L16.9167 6.41671C16.9939 6.34044 17.0552 6.24961 17.097 6.14948C17.1388 6.04934 17.1604 5.9419 17.1604 5.83338C17.1604 5.72486 17.1388 5.61742 17.097 5.51728C17.0552 5.41715 16.9939 5.32632 16.9167 5.25005C16.8404 5.17285 16.7496 5.11155 16.6494 5.06972C16.5493 5.02789 16.4419 5.00635 16.3333 5.00635C16.2248 5.00635 16.1174 5.02789 16.0172 5.06972C15.9171 5.11155 15.8263 5.17285 15.75 5.25005L7.50001 13.5Z" fill="#444444" />
-          </svg>
+          <GoCheck />
         </button>
       </div>
     </div>
